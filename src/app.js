@@ -11,47 +11,47 @@ require('angular-sanitize')
 require('./editor')
 
 var dependencies = [
-  'ui.router',
-  'ui.bootstrap',
-  'editor',
-  'pascalprecht.translate'
+	'ui.router',
+	'ui.bootstrap',
+	'editor',
+	'pascalprecht.translate'
 ]
 
 angular
-  .module('ymlEditor', dependencies)
-  .constant('AppConfig', {})
-  .config(require('./app.routes'))
-  .config(require('./app.config'))
-  .run(function($rootScope, $state, $stateParams, $document) {
-    'ngInject'
-    $rootScope.$state = $state
-    $rootScope.$stateParams = $stateParams
-  })
-  .config([
-    '$compileProvider',
-    function($compileProvider) {
-      $compileProvider.aHrefSanitizationWhitelist(
-        /^\s*(https?|ftp|mailto|tel|file|blob):/
-      )
-    }
-  ])
+	.module('jsonEditor', dependencies)
+	.constant('AppConfig', {})
+	.config(require('./app.routes'))
+	.config(require('./app.config'))
+	.run(function($rootScope, $state, $stateParams, $document) {
+		'ngInject'
+		$rootScope.$state = $state
+		$rootScope.$stateParams = $stateParams
+	})
+	.config([
+		'$compileProvider',
+		function($compileProvider) {
+			$compileProvider.aHrefSanitizationWhitelist(
+				/^\s*(https?|ftp|mailto|tel|file|blob):/
+			)
+		}
+	])
 
 var app = {
-  initialize: function() {
-    this.angularBootstrap()
-  },
-  angularBootstrap: function() {
-    var self = this
-    angular.element(document).ready(function() {
-      self.onDeviceReady()
-    })
-  },
-  bindEvents: function() {
-    document.addEventListener('deviceready', this.onDeviceReady, false)
-  },
-  onDeviceReady: function() {
-    angular.bootstrap(document, ['ymlEditor'])
-  }
+	initialize: function() {
+		this.angularBootstrap()
+	},
+	angularBootstrap: function() {
+		var self = this
+		angular.element(document).ready(function() {
+			self.onDeviceReady()
+		})
+	},
+	bindEvents: function() {
+		document.addEventListener('deviceready', this.onDeviceReady, false)
+	},
+	onDeviceReady: function() {
+		angular.bootstrap(document, ['jsonEditor'])
+	}
 }
 
 app.initialize()
