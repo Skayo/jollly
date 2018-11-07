@@ -1,10 +1,11 @@
-# Polly
+# Jolly
 
 ## About
 
-The simplest editor to translate apps & sites for YML files
+The simplest editor to translate apps & sites for JSON files
 FAST & SIMPLE & FREE & OPENSOURCE
 
+This project is a fork of [Pollly](https://github.com/pikock/pollly), the same editor but for YML files!
 The editor is built with AngularJS. Give it a shot!
 
 ## Build the project
