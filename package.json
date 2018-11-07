@@ -1,12 +1,12 @@
 {
-  "name": "pollly",
+  "name": "jollly",
   "version": "0.0.1",
-  "description": "YML Editor used for managing differents translations files",
+  "description": "JSON Editor used for managing differents translations files",
   "main": "src/app.js",
   "scripts": {
-    "dev": "NODE_ENV=dev gulp serve",
-    "build": "NODE_ENV=production gulp build",
-    "staging": "NODE_ENV=staging gulp build",
+    "dev": "set NODE_ENV=dev && gulp serve",
+    "build": "set NODE_ENV=production && gulp build",
+    "staging": "set NODE_ENV=staging && gulp build",
     "predeploy": "git checkout master && npm run build && git push origin master && git checkout gh-pages",
     "deploy": "rm -rf assets index.html bundle.js && mv dist/* .  && git add index.html assets bundle.js && git commit -m 'New realease' && git push origin gh-pages",
     "postdeploy": "git checkout master",
@@ -14,9 +14,12 @@
   },
   "keywords": [
     "translation",
-    "yml"
+    "json"
   ],
   "author": "Antoine Renault <antoine.renault.mmi@gmail.com>",
+  "contributors": [
+  	"Skayo <jonasg.cool@gmail.com> (https://github.com/Skayo)"
+  ],
   "license": "ISC",
   "lint-staged": {
     "*.js": [
