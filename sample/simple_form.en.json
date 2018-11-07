@@ -1,0 +1,29 @@
+{
+  "simple_form": {
+    "yes": "Yes",
+    "no": "No",
+    "required": {
+      "text": "required",
+      "mark": {
+        "mark": {
+          "mark": {
+            "mark": "*"
+          }
+        }
+      }
+    },
+    "error_notification": {
+      "default_message": "This is a very long sentence  that spans several lines in the YAML but which will be rendered as a string  with newlines preserved."
+    },
+    "hints": {
+      "try": false,
+      "defaults": {
+        "username": "User name to sign in.",
+        "password": "No special characters, please."
+      }
+    }
+  },
+  "test": {
+    "test": "NTEOSJDSQ"
+  }
+}
